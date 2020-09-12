@@ -1,11 +1,10 @@
 const orm = require('../config/orm');
 
-// Also inside burger.js, create the code that will call the ORM functions using burger specific input for the ORM.
-
-const burger = {
-  create(vals, cb) {
+// use burger specifc input to the ORM
+const burgers = {
+  create(cols, vals, cb) {
     // only needs one column but can take multiple in an array
-    orm.create('burgers', ['burger_name'], [vals], (res) => {
+    orm.create('burgers', cols, vals, (res) => {
       cb(res);
     });
   },
@@ -14,8 +13,8 @@ const burger = {
       cb(res);
     });
   },
-  update(statusBool, burgerName, cb) {
-    orm.update('burgers', `{status: ${statusBool}}`, (res) => {
+  update(burgerId, cb) {
+    orm.update('burgers', 'devoured = NOT devoured', burgerId, (res) => {
       cb(res);
     });
   },
@@ -23,4 +22,4 @@ const burger = {
 
 // export it
 
-module.exports = burger;
+module.exports = burgers;

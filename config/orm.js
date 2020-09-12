@@ -9,27 +9,6 @@ function printQuestionMarks(num) {
   return arr.toString();
 }
 
-function objToSql(ob) {
-  // change {status: false} to 'status=false
-  const arr = [];
-
-  // loop through the keys and push the key/value as a string int arr
-  // eslint-disable-next-line no-restricted-syntax
-  for (let [key, value] of Object.entries(ob)) {
-    // check to skip hidden properties
-    if (Object.hasOwnProperty.call(ob, key)) {
-      // if string with spaces, add quotations
-      if (typeof value === 'string' && value.indexOf(' ') >= 0) {
-        value = `'${value}'`;
-      }
-
-      arr.push(`${key}=${value}`);
-    }
-  }
-  // translate array of strings to a single comma-separated string
-  return arr.toString();
-}
-
 const orm = {
   // select all
   all(tableInput, cb) {
@@ -55,12 +34,12 @@ const orm = {
     );
   },
   // update one
-  update(table, objColVals, condition, cb) {
+  update(table, colVal, condition, cb) {
     const queryString = `
         UPDATE 
             ${table} 
         SET 
-            ${objToSql(objColVals)}
+            ${colVal}
         WHERE
             ${condition}
       `;
