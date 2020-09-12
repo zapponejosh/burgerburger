@@ -10,6 +10,7 @@ function printQuestionMarks(num) {
 }
 
 function objToSql(ob) {
+  // change {status: false} to 'status=false
   const arr = [];
 
   // loop through the keys and push the key/value as a string int arr
