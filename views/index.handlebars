@@ -1,0 +1,37 @@
+<h1>BurgerBurger</h1>
+
+<h3>You know you want it.</h3>
+
+<table>
+  <tr><h4>Burgers</h4></tr>
+  <tr>
+    <th>Order up!</th>
+    <th>Devoured!</th>
+  </tr>
+  {{#each burgers}}
+    {{#if devoured}}
+    <tr>
+      <td>{{burger_name}}</td>
+      <td>---</td>
+      <td><button class="btn">Devour!</button></td>
+    </tr>
+    {{else}}
+    <tr>
+      <td>---</td>
+      <td>{{burger_name}}</td>
+      <td><button class="btn">Order again!</button></td>
+    </tr>
+    {{/if}}
+  {{/each}}
+  
+</table>
+
+<style>
+  * {
+    text-align: center;
+  }
+  table {
+    margin: 0 auto;
+  }
+
+</style>
