@@ -1,0 +1,84 @@
+* {
+  text-align: center;
+}
+
+body {
+  height: 100%;
+  background-color: #dbbe85;
+  margin-bottom: 50px;
+}
+
+#logo-name {
+  position: relative;
+  width: ;
+  color: white;
+  background-color: rgba(218, 118, 56, .75);
+  margin: 100px auto -150px auto;
+  z-index: 2;
+}
+
+svg {
+  margin: 20 auto;
+  max-height: 200px;
+}
+
+
+table {
+  margin: 0 auto;
+  background-color: #79A973;
+  border-radius: 5px;
+}
+
+td, th {
+  padding: 10px;
+}
+
+.subhead {
+  padding: 20px;
+}
+textarea {
+  display: block;
+  margin: 10px auto;
+  outline: none;
+  resize: none;
+  overflow: auto;
+}
+
+.new-burger {
+  margin: 10px auto;
+  width: 70%;
+
+}
+
+.new-burger > button {
+  width: 336px;
+}
+
+/* logo animation */
+.run-animation {
+  animation: spin 3s;
+  animation-timing-function: cubic-bezier(0.88, -0.25, 0.265, 1.25);
+}
+
+.run-animation:active {
+  animation: spin 3s;
+  animation-timing-function: cubic-bezier(0.88, -0.25, 0.265, 1.25);
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin-clicked {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

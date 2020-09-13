@@ -52,7 +52,23 @@ const orm = {
       },
     );
   },
+  delete(table, condition, cb) {
+    const queryString = `
+        DELETE FROM
+            ${table} 
+        
+        WHERE
+            ${condition}
+      `;
+    console.log(queryString);
 
+    connection.query(
+      queryString, (err, result) => {
+        if (err) throw err;
+        cb(result);
+      },
+    );
+  },
 };
 
 module.exports = orm;

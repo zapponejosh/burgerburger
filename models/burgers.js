@@ -18,6 +18,11 @@ const burgers = {
       cb(res);
     });
   },
+  delete(burgerId, cb) {
+    orm.delete('burgers', burgerId, (res) => {
+      cb(res);
+    });
+  },
 };
 
 // export it
