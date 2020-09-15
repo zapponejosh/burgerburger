@@ -41,12 +41,12 @@ const orm = {
         SET 
             ${colVal}
         WHERE
-            ${condition}
+            id = ?
       `;
     console.log(queryString);
 
     connection.query(
-      queryString, (err, result) => {
+      queryString, [condition], (err, result) => {
         if (err) throw err;
         cb(result);
       },
@@ -58,12 +58,12 @@ const orm = {
             ${table} 
         
         WHERE
-            ${condition}
+            id = ?
       `;
     console.log(queryString);
 
     connection.query(
-      queryString, (err, result) => {
+      queryString, condition, (err, result) => {
         if (err) throw err;
         cb(result);
       },

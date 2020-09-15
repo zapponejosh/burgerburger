@@ -28,11 +28,9 @@ router.post('/api/burgers', (req, res) => {
 // devour burger (put) WITH
 // make burger again (put)
 router.put('/api/burgers/:id', (req, res) => {
-  const condition = `id = ${req.params.id}`;
-
   // The query will revers the devoured bool in the table
   // if the it has been eaten you can use the same query to make it again
-  burgers.update(condition, (result) => {
+  burgers.update(req.params.id, (result) => {
     // if it has been eaten the status returned should be false
     if (result.changedRows === 0) {
       // If no rows were changed, then the ID must not exist, so 404
@@ -43,8 +41,7 @@ router.put('/api/burgers/:id', (req, res) => {
 });
 
 router.delete('/api/burgers/delete/:id', (req, res) => {
-  const condition = `id = ${req.params.id}`;
-  burgers.delete(condition, (result) => {
+  burgers.delete(req.params.id, (result) => {
     console.log(result);
     if (result.affectedRows === 0) {
       // If no rows were changed, then the ID must not exist, so 404

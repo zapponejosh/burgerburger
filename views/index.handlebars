@@ -11,16 +11,16 @@
   <tr>
     <td>---</td>
     <td>{{burger_name}}</td>
-    <td><button class="btn order burger" data-id="{{id}}">Order again!</button></td>
-        <td><button class=" btn remove" data-id="{{id}}">Remove from menu</button></td>
+    <td><button type="button" class="btn order burger" data-id="{{id}}">Order again!</button></td>
+        <td><button type="button" class=" btn remove" data-id="{{id}}">Remove from menu</button></td>
 
   </tr>
   {{else}}
   <tr>
     <td>{{burger_name}}</td>
     <td>---</td>
-    <td><button class="btn eat burger" data-id="{{id}}">Devour!</button></td>
-    <td><button class="btn remove" data-id="{{id}}">Remove from menu</button></td>
+    <td><button type="button" class="btn eat burger" data-id="{{id}}">Devour!</button></td>
+    <td><button type="button" class="btn remove" data-id="{{id}}">Remove from menu</button></td>
   </tr>
 
   {{/if}}
