@@ -10,7 +10,6 @@ body {
 
 #logo-name {
   position: relative;
-  width: ;
   color: white;
   background-color: rgba(218, 118, 56, .75);
   margin: 100px auto -150px auto;
@@ -27,6 +26,14 @@ table {
   margin: 0 auto;
   background-color: #79A973;
   border-radius: 5px;
+}
+
+.btn {
+  background-color: whitesmoke;
+}
+
+.btn:hover {
+  background-color: lightgrey;
 }
 
 td, th {
