@@ -1,6 +1,6 @@
 <table>
   <tr>
-    <h4>Burgers</h4>
+    <h4>Order from the menu or create your own!</h4>
   </tr>
   <tr>
     <th>Order up!</th>
@@ -12,7 +12,7 @@
     <td>---</td>
     <td>{{burger_name}}</td>
     <td><button type="button" class="btn order burger" data-id="{{id}}">Order again!</button></td>
-        <td><button type="button" class=" btn remove" data-id="{{id}}">Remove from menu</button></td>
+        <td><button type="button" class="btn remove" data-id="{{id}}"><img src="/assets/img/trash.svg" alt="trash"></button></td>
 
   </tr>
   {{else}}
@@ -20,7 +20,7 @@
     <td>{{burger_name}}</td>
     <td>---</td>
     <td><button type="button" class="btn eat burger" data-id="{{id}}">Devour!</button></td>
-    <td><button type="button" class="btn remove" data-id="{{id}}">Remove from menu</button></td>
+    <td><button type="button" class="btn remove" data-id="{{id}}"><img src="/assets/img/trash.svg" alt="trash"></button></td>
   </tr>
 
   {{/if}}

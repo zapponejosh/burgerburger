@@ -11,7 +11,7 @@ body {
 #logo-name {
   position: relative;
   color: white;
-  background-color: rgba(218, 118, 56, .75);
+  background-color: rgba(218, 118, 56, 0.75);
   margin: 100px auto -150px auto;
   z-index: 2;
 }
@@ -21,22 +21,26 @@ svg {
   max-height: 200px;
 }
 
-
 table {
+  table-layout: fixed;
+  min-width: 50%;
   margin: 0 auto;
-  background-color: #79A973;
+  background-color: #89cf81;
   border-radius: 5px;
 }
 
 .btn {
   background-color: whitesmoke;
+  width: 100%;
+
 }
 
 .btn:hover {
   background-color: lightgrey;
 }
 
-td, th {
+td,
+th {
   padding: 10px;
 }
 
@@ -54,11 +58,14 @@ textarea {
 .new-burger {
   margin: 10px auto;
   width: 70%;
-
 }
 
 .new-burger > button {
   width: 336px;
+}
+
+.remove {
+  width: 100%;
 }
 
 /* logo animation */
@@ -88,4 +95,16 @@ textarea {
   100% {
     transform: rotate(360deg);
   }
+}
+
+@media screen and (max-width: 960px) {
+  table {
+    width: 100%;
+    border-radius: 0;
+  }
+  .new-burger {
+    width: 100%;
+    margin: 0 auto;
+  }
+
 }
