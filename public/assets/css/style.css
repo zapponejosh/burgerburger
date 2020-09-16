@@ -24,7 +24,7 @@ svg {
 table {
   table-layout: fixed;
   min-width: 50%;
-  margin: 0 auto;
+  margin: 10px auto;
   background-color: #89cf81;
   border-radius: 5px;
 }
