@@ -19,7 +19,7 @@ A burger ordering app practicing mySQL, node, and express.
 
 
 ## Deployment
-        **[Find this project deployed here](https://bugerburger-restuarant.herokuapp.com/)**
+**[Find this project deployed here](https://bugerburger-restuarant.herokuapp.com/)**
         
 
 ## Contact
